@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Z99 Development Roadmap</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0d0d0d;
+            color: white;
+            padding: 2rem;
+        }
+        .roadmap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <div class="roadmap">
+        <h1>Z99 Development Plan</h1>
+        <div class="mermaid">
+            graph TD
+                A[Current Version] --> B[User Login]
+                A --> C[Live Match Data]
+                A --> D[CoD Shop]
+                B --> E[Player Profiles]
+                C --> F[Weapon Stats]
+                D --> G[Digital Downloads]
+        </div>
+        <button onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>
