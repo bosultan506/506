@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z99 Gaming | Project Roadmap</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --cod-red: #e63946;
+            --cod-dark: #0d0d0d;
+            --cod-light: #1a1a1a;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--cod-dark);
+            color: white;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://example.com/warzone-bg.jpg');
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        h1 {
+            color: var(--cod-red);
+            font-size: 2.5rem;
+        }
+        .roadmap-section {
+            background: var(--cod-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .task-list {
+            margin: 1rem 0;
+        }
+        .task {
+            margin: 0.5rem 0;
+        }
+        .completed {
+            color: #4CAF50;
+            text-decoration: line-through;
+        }
+        .mermaid {
+            background: #111;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Z99 Gaming Development</h1>
+        <p>Call of Duty Warzone Feature Roadmap</p>
+    </header>
+
+    <div class="container">
+        <section class="roadmap-section">
+            <h2>Core Features</h2>
+            <div class="task-list">
+                <div class="task completed">✅ Base Website Deployment</div>
+                <div class="task">🛠️ User Authentication System</div>
+                <div class="task">⏳ Warzone API Integration</div>
+            </div>
+
+            <div class="mermaid">
+                graph TD
+                    A[Current Version] --> B[Player Profiles]
+                    A --> C[Live Match Tracking]
+                    A --> D[In-Game Shop]
+                    B --> E[Loadout Sharing]
+                    C --> F[Weapon Analytics]
+            </div>
+        </section>
+
+        <section class="roadmap-section">
+            <h2>Development Timeline</h2>
+            <div class="mermaid">
+                gantt
+                    title Project Schedule
+                    dateFormat  YYYY-MM-DD
+                    section Authentication
+                    Login System      :active, auth1, 2023-11-01, 14d
+                    Payment Gateway   :crit, pay1, after auth1, 7d
+                    section Game Data
+                    API Connection    :api1, 2023-11-05, 21d
+            </div>
+        </section>
+
+        <section class="roadmap-section">
+            <h2>Quick Links</h2>
+            <div class="task-list">
+                <div><a href="#" style="color: var(--cod-red);">GitHub Repository</a></div>
+                <div><a href="#" style="color: var(--cod-red);">Live Website</a></div>
+                <div><a href="#" style="color: var(--cod-red);">Design Mockups</a></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Initialize Mermaid diagrams
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            flowchart: {
+                useMaxWidth: false
+            }
+        });
+
+        // Simple status toggle for demo purposes
+        document.querySelectorAll('.task').forEach(item => {
+            item.addEventListener('click', () => {
+                if(item.classList.contains('completed')) {
+                    item.classList.remove('completed');
+                    item.innerHTML = item.innerHTML.replace('✅', '⏳');
+                } else {
+                    item.classList.add('completed');
+                    item.innerHTML = item.innerHTML.replace('⏳', '✅');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
