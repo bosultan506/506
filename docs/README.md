@@ -1,4 +1,11 @@
-# Z99 Gaming - Development Roadmap
+z99-gaming/
+├── README.md          # Public GitHub roadmap
+├── public/
+│   ├── index.html     # Main site
+│   └── roadmap.html   # Interactive viewer
+└── docs/
+    └── DEVELOPMENT.md # Technical plans
+    # Z99 Gaming - Development Roadmap
 
 ## Phase 1: Core Features
 - [x] Base Website Deployment
