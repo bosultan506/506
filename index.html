@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z99 | Call of Duty Warzone Hub</title>
+    <style>
+        /* Modern Warzone Theme */
+        :root {
+            --cod-red: #e63946;
+            --cod-dark: #0d0d0d;
+            --cod-light: #1a1a1a;
+            --cod-gold: #ffd700;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: var(--cod-dark);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .warzone-header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://assets.codepen.io/3364143/warzone-bg.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--cod-red);
+            text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #aaa;
+        }
+        
+        .cta-button {
+            background: var(--cod-red);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background: #c5303a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: var(--cod-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--cod-red);
+        }
+    </style>
+</head>
+<body>
+    <!-- Warzone Hero Section -->
+    <header class="warzone-header">
+        <div class="logo">Z99</div>
+        <p class="tagline">ELITE CALL OF DUTY WARZONE HUB</p>
+        <button class="cta-button" id="enterButton">ENTER WARZONE</button>
+    </header>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>PRO STAT TRACKING</h3>
+            <p>Real-time Warzone stats and leaderboards</p>
+        </div>
+        <div class="feature-card">
+            <h3>ELITE TOURNAMENTS</h3>
+            <p>Compete in daily cash prize events</p>
+        </div>
+        <div class="feature-card">
+            <h3>LOADOUT BUILDER</h3>
+            <p>Create and share meta loadouts</p>
+        </div>
+    </section>
+    
+    <!-- Simple JavaScript -->
+    <script>
+        // Basic interactive elements
+        document.getElementById('enterButton').addEventListener('click', function() {
+            alert('Warzone systems initializing...\n(Future features will load here)');
+            // This will be replaced with actual functionality
+            this.textContent = 'COMING SOON';
+            this.style.background = '#555';
+        });
+        
+        // Confirm site is working
+        console.log('Z99 Gaming 2.0 - Systems Online');
+    </script>
+</body>
+</html>
